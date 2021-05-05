@@ -1,0 +1,74 @@
+.our-interests {
+  padding-top: 60px;
+  padding-bottom: 76px;
+  @media screen and (min-width: $md-width) {
+    padding-top: 130px;
+    padding-bottom: 156px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    color: $main-color;
+    @media screen and (min-width: $md-width) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    width: 100%;
+    gap: 40px;
+    @media screen and (min-width: $md-width) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
+    }
+  }
+
+  &__item {
+    color: $main-color;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .card {
+      border: none;
+
+      &__image {
+        height: 240px;
+        margin-bottom: 20px;
+        @media screen and (min-width: $md-width) {
+          height: 300px;
+          margin-bottom: 30px;
+        }
+        img{
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &__text{
+        h3{
+          font-size: 18px;
+          line-height: 170%;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 6px;
+          @media screen and (min-width: $md-width){
+            font-size: 21px;
+            margin-bottom: 10px;
+          }
+        }
+        p{
+          font-size: 14px;
+          line-height: 180%;
+          @media screen and (min-width: $md-width){
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

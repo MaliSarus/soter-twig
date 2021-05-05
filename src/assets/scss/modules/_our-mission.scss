@@ -1,0 +1,158 @@
+.our-mission {
+  background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
+  padding-top: 272px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $md-width) {
+    background: url("../img/our-mission/balls-left.svg"), url("../img/our-mission/balls-right.svg"),linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
+    background-repeat: no-repeat;
+    background-position: 0 71%, 100% 26%,0 0;
+    padding-top: 356px;
+    padding-bottom: 104px;
+  }
+
+  &__slider-control {
+    margin-top: 85px;
+    margin-bottom: 14px;
+    display: none;
+    position: relative;
+    z-index: 10;
+    @media screen and (min-width: $xl-width) {
+      display: flex;
+      width: 80px;
+      justify-content: space-between;
+    }
+
+    .arrow {
+      &-prev, &-next {
+        cursor: pointer;
+        height: 20px;
+        width: 11px;
+        background-image: url('../img/our-mission/arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform .2s, filter .2s;
+        &:hover{
+          filter: drop-shadow(0 0 7px rgba($main-color, .2));
+        }
+      }
+      &-prev{
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+      &-next{
+        transform: rotate(180deg);
+        &:hover{
+          transform: rotate(180deg) scale(1.2);
+        }}
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    text-align: center;
+
+    > .button_blue {
+      margin: 25px 0 0;
+      @media screen and (min-width: $xl-width) {
+        display: none;
+      }
+    }
+  }
+
+  &__mobile-button {
+    text-align: center;
+    @media screen and (min-width: $md-width) {
+      text-align: left;
+    }
+
+    .button_blue {
+      width: 100%;
+      margin-top: 25px;
+      @media screen and (min-width: $sm-width) {
+        width: auto;
+      }
+      @media screen and (min-width: $md-width) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    text-align: left;
+    color: $main-color;
+    max-width: 600px;
+    margin-bottom: 25px;
+    @media screen and (min-width: $md-width) {
+      text-align: left;
+    }
+    @media screen and (min-width: $xl-width) {
+      padding-right: 32px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      @media screen and (min-width: $md-width) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 180%;
+      @media screen and (min-width: $md-width) {
+        font-size: 20px;
+        line-height: 180%;
+      }
+    }
+
+    .button_blue {
+      display: none;
+      @media screen and (min-width: $md-width) {
+        display: inline-block;
+        margin-top: 50px;
+
+      }
+    }
+
+    &-block {
+      color: $main-color;
+      margin-bottom: 25px;
+      @media screen and (min-width: $xl-width) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__slider-wrapper {
+    @media screen and (min-width: $xl-width) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__slider {
+    padding-right: 42%;
+    //padding-right: calc(100vw * 0.36);
+    height: 180px;
+    @media screen and (min-width: $xl-width) {
+      height: 100%;
+      padding-right: 50%;
+      //padding-right: calc(100vw * 0.16);
+    }
+  }
+
+  &__slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.key-features{
+  padding: 65px 0;
+  @media screen and (min-width: $lg-width){
+    padding: 130px 0;
+  }
+  &__top{
+    text-align: center;
+    color: $main-color;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+    @media screen and (min-width: $md-width){
+      max-width: 617px;
+      margin-bottom: 90px;
+    }
+    h2{
+      @media screen and (min-width: $md-width){
+        margin-bottom: 6px;
+        font-weight: bold;
+        font-size: 55px;
+        line-height: 120%;
+      }
+    }
+    p{
+      font-weight: 500;
+      @media screen and (min-width: $md-width){
+        font-size: 25px;
+        line-height: 120%;
+      }
+    }
+  }
+  &__items{
+    margin-top: -24px;
+    @media screen and (min-width: $md-width){
+      margin-top: -47px;
+    }
+  }
+  &__item{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $md-width){
+      margin-top: 47px;
+    }
+    &-icon{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+      @media screen and (min-width: $md-width){
+        width: 60px;
+        height: 60px;
+        margin-bottom: 25px;
+      }
+      img{
+        max-width: 100%;
+        max-height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+    &-text{
+      color:$main-color;
+      text-align: center;
+      h3{
+        font-size: 16px;
+        margin-bottom: 8px;
+        @media screen and (min-width: $md-width){
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 120%;
+          margin-bottom: 11px;
+        }
+      }
+      p{
+        font-size: 14px;
+        line-height: 160%;
+        color: black;
+        @media screen and (min-width: $md-width){
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

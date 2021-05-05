@@ -1,0 +1,26 @@
+<section class="key-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="key-features__top">
+          <h2>Key Features</h2>
+          <p>Make Your Workplace Safer With Soter Products</p>
+        </div>
+      </div>
+    </div>
+    <div class="row key-features__items">
+      {% for feature in keyFeatures %}
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="key-features__item">
+            <div class="key-features__item-icon"><img src="./assets/img/key-features/{{ feature.icon }}"
+                                                      alt="Иконка"></div>
+            <div class="key-features__item-text">
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.text }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

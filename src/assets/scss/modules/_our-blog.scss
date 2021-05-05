@@ -1,0 +1,67 @@
+.our-blog{
+  padding: 55px 0;
+  @media screen and (min-width: $md-width){
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 35px;
+    @media screen and (min-width: $md-width) {
+      margin-bottom: 60px;
+    }
+    h2{
+      color: $main-color;
+      font-size: 25px;
+      line-height: 120%;
+      @media screen and (min-width: $md-width){
+        font-size: 55px;
+      }
+    }
+  }
+  &__first-article{
+    margin-bottom: 25px;
+    @media screen and (min-width: $md-width){
+      margin-bottom: 30px;
+    }
+    .article-card {
+      max-width: none;
+      @media screen and (min-width: $md-width) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-radius: 5px 0px 0px 5px;
+      }
+      &__image{
+
+        @media screen and (min-width: $md-width){
+          height: auto;
+          width: 100%;
+          max-width: 430px;
+        }
+      }
+      &__desc{
+        @media screen and (min-width: $md-width){
+          padding-top: 40px;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+      &__date{
+        display: none;
+        position: static;
+        @media screen and (min-width: $md-width){
+          display: flex;
+          margin-bottom: 28px;
+          transform: none;
+          width: 111px;
+        }
+      }
+      &__date.mobile{
+        display: flex;
+        position: absolute;
+        @media screen and (min-width: $md-width){
+          display: none;
+        }
+      }
+    }
+  }
+}

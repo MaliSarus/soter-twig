@@ -1,0 +1,19 @@
+<section class="use-cases">
+  <div class="container">
+    {% for case in useCases %}
+      <div class="row align-items-center">
+        <div class="col-12 col-xl-6">
+          <div class="use-cases__text">
+            <h2>{{ case.title }}</h2>
+            <p>{{ case.text }}</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
+          <div class="use-cases__image">
+            <img src="./assets/img/use-cases/{{ case.image }}" alt="Картинка">
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

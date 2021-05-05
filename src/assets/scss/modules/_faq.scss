@@ -1,0 +1,106 @@
+.faq {
+  padding: 62px 0;
+  @media screen and (min-width: $md-width) {
+    padding: 135px 0;
+  }
+  &__head{
+    h2{
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 120%;
+      text-align: center;
+      color: $main-color;
+      max-width: 280px;
+      margin: 0 auto 27px;
+      @media screen and (min-width: $md-width){
+        max-width: 803px;
+        font-size: 64px;
+        line-height: 111.2%;
+        margin-bottom: 48px;
+      }
+    }
+  }
+  &__list{
+    ul{
+      padding-left: 0;
+      li{
+        position: relative;
+        border-bottom: 1px solid #D6DEEB;
+        cursor: pointer;
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        padding: 18px 46px 18px 18px;
+        @media screen and (min-width: $md-width){
+          font-size: 18px;
+          line-height: 111.2%;
+          padding: 22px 25px;
+        }
+        &.open{
+          background: #D6DEEB;
+          border-color: darken(#D6DEEB,5);
+          &:last-child{
+            border-color: transparent;
+          }
+          .point{
+            span:last-child{
+              transform: translateY(-50%) rotate(0);
+            }
+          }
+        }
+        &:hover{
+          background: #D6DEEB;
+        }
+        &::before{
+          display: none;
+        }
+        &:first-child{
+          border-top: 1px solid #D6DEEB;;
+        }
+        >p{
+          display: none;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 150%;
+          padding-top: 10px;
+          width: calc(100% + 26px);
+          @media screen and (min-width: $md-width){
+            width: auto;
+            padding-top: 17px;
+            font-size: 16px;
+            line-height: 150%;
+          }
+        }
+        .point{
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          right: 17px;
+          top: 21px;
+          @media screen and (min-width: $md-width){
+            top: 24px;
+            right: 20px;
+          }
+          span{
+            width: 100%;
+            height: 1.25px;
+            background: #000;
+            background: $main-color;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            transition: transform .25s;
+            &:last-child{
+              transform: translateY(-50%) rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

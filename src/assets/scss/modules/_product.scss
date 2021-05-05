@@ -1,0 +1,91 @@
+.product{
+  background: #F6FAFF;
+  padding: 70px 0;
+  @media screen and (min-width: $lg-width){
+    padding: 140px 0;
+  }
+  &__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 35px;
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 0;
+    }
+    &::before{
+      position: absolute;
+      width: 180px;
+      height: 130px;
+      background: url("../img/product/bg-balls.svg") center / contain no-repeat;
+      display: block;
+      content: '';
+      left: -25px;
+      top: -15px;
+      @media screen and (min-width: $lg-width){
+        width: 255px;
+        height: 202px;
+        left: -50px;
+        top: -20px;
+      }
+    }
+    img{
+      filter: drop-shadow(22px 63px 65px rgba(8, 81, 191, 0.03));
+      max-height: 600px;
+      max-width: 100%;
+      @media screen and (min-width: $lg-width){
+        max-height: none;
+      }
+    }
+  }
+  &__right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__text{
+    h2{
+      text-align: center;
+      color: $main-color;
+      font-size: 25px;
+      margin-bottom: 15px;
+      @media screen and (min-width: $md-width) {
+        margin-bottom: 30px;
+        font-size: 55px;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    p{
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
+      color: $main-color;
+      margin-bottom: 22.5px;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 45px;
+        font-size: 22px;
+        line-height: 160%;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    .button{
+      @media screen and (min-width: $md-width){
+        //max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (min-width: $lg-width){
+        margin-right: 0;
+        margin-left: 0;
+
+      }
+    }
+  }
+}

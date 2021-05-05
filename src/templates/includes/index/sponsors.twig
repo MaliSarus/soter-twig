@@ -1,0 +1,39 @@
+<section class="sponsors">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sponsors__block">
+          <div class="sponsors__head">
+            <h2 class="sponsors__title title title_dark">Trusted by Industry Leaders</h2>
+            <div class="arrows">
+              <div class="arrow arrow-prev"></div>
+              <div class="arrow arrow-next"></div>
+            </div>
+          </div>
+          <div class="sponsors__content">
+            <div class="swiper-container sponsors__slider">
+              <div class="swiper-wrapper">
+                {% for sponsorSlideImg in sponsors %}
+                  <div class="swiper-slide sponsors__slide">
+                    <img src="./assets/img/sponsors/{{ sponsorSlideImg }}" alt="Лого спонсора">
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="swiper-nav swiper-button-next"></div>
+              <div class="swiper-nav swiper-button-prev"></div>
+            </div>
+            <div class="pagination-wrapper">
+              <div class="pagination-container">
+                <div class="little-dot nav-dot little-dot--first"></div>
+                <div class="little-dot">
+                  <div class="big-dot"></div>
+                </div>
+                <div class="little-dot nav-dot little-dot--last"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

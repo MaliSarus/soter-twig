@@ -1,0 +1,41 @@
+<section class="clients clients_simple">
+  <div class="container-fluid container-lg">
+    <div class="row clients__head-row">
+      <div class="col-12 clients__head"><h2 class="title_dark">SoterSpine Clients Success Stories</h2></div>
+    </div>
+    <div class="row">
+      <div class="col-12 clients__content">
+        <div class="swiper-container clients__slider">
+          <div class="swiper-wrapper">
+            {% for client in clients %}
+              <div class="clients__item swiper-slide">
+                <div class="clients__card">
+                  <div class="clients__card-top">
+                    <div class="logo"><img src="./assets/img/clients/{{ client.logo }}" alt="Логотип"></div>
+                    <div class="country"><img src="./assets/img/clients/{{ client.country }}" alt="Страна"></div>
+                  </div>
+                  <div class="clients__card-main">
+                    <h3>{{ client.title }}</h3>
+                    <p>{{ client.text }}</p>
+                  </div>
+                  <div class="clients__card-bottom">
+                    <a href="#">Read Case Study</a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="pagination-wrapper">
+          <div class="pagination-container">
+            <div class="little-dot nav-dot little-dot--first"></div>
+            <div class="little-dot">
+              <div class="big-dot"></div>
+            </div>
+            <div class="little-dot nav-dot little-dot--last"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

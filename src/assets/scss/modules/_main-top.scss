@@ -1,0 +1,263 @@
+.main-top{
+  padding-top: 137px;
+  padding-bottom: 81px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  &::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(5, 24, 52, 0.85);
+  }
+  &::after{
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content: url('../img/main-top/main-top-balls-bg-sm.svg');
+    @media screen and (min-width: $lg-width){
+      content:url('../img/main-top/main-top-balls-bg-lg.svg');
+      transform: none;
+      top: unset;
+      bottom: 70px;
+    }
+  }
+  @media screen and (min-width: $lg-width){
+    padding-top: 297px;
+    padding-bottom: 217px;
+  }
+  &_simple{
+    position: relative;
+    background: #051834!important;
+    padding-top: 77px;
+    padding-bottom: 115px;
+    &::before,&::after{
+      content: '' !important;
+    }
+    &::before{
+      display: none;
+    }
+    &::after{
+      height: 10px;
+      width: 100%;
+      top: unset;
+      left: 0;
+      bottom: 0!important;
+      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
+      transform: none;
+    }
+    .main-top__text{
+      padding-left: 0;
+      &::before,&::after{
+        content: '';
+        display: none;
+      }
+    }
+    @media screen and (min-width: $lg-width){
+      padding-top: 250px;
+      padding-bottom: 162px;
+    }
+  }
+  &_rate {
+    padding-top: 115px;
+    padding-bottom: 41px;
+    @media screen and (min-width: $lg-width){
+      padding-top: 250px;
+      padding-bottom: 121px;
+    }
+    &::after{
+      content: '';
+      height: 10px;
+      width: 100%;
+      top: unset;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
+      transform: none;
+    }
+    .main-top__text{
+      padding-left: 0;
+      &::before,&::after{
+        content: '';
+        display: none;
+      }
+    }
+  }
+  &__video{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #000;
+    @media screen and (min-width: $lg-width){
+     display: block;
+    }
+    video{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+  &__text{
+    text-align: center;
+    margin-bottom: 21px;
+    &::before{
+      position: absolute;
+      z-index: 0;
+      left: 0px;
+      top: 99px;
+      display: block;
+      content: url('../img/main-top/title-balls-bg-sm.svg');
+    }
+    @media screen and (min-width: $lg-width){
+      text-align: left;
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 44px;
+      &::before{
+        left: -135px;
+        top: -36px;
+        content: url('../img/main-top/title-balls-bg.svg');
+      }
+      &::after{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        display: block;
+        width: 4px;
+        height: 100%;
+        background: $accent-color;
+        border-radius: 2px;
+      }
+    }
+
+  }
+  &__title{
+    margin-bottom: 11px;
+    span{
+      line-height: 120%;
+    }
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 30px;
+      span{
+        line-height: 71px;
+      }
+    }
+  }
+  &__desc{
+    font-size: 14px;
+    font-weight: 500;
+    @media screen and (min-width: $md-width){
+      font-size: 21px;
+    }
+    @media screen and (min-width: $lg-width){
+      max-width: 644px;
+    }
+  }
+  &__nav{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      flex-basis: 100%;
+      margin-bottom: 11px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: $lg-width){
+
+        margin-bottom: 0;
+        flex-basis: unset;
+        margin-right: 15px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+    .button_blue{
+      @media screen and (min-width: $lg-width){
+        //width: 100%;
+        //max-width: 213px;
+      }
+    }
+  }
+  .rating{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    p {
+      font-size: 12px;
+    }
+    @media screen and (min-width: $md-width){
+      p {
+        font-size: 14px;
+      }
+    }
+    @media screen and (min-width: $lg-width){
+      justify-content: initial;
+    }
+    >*{
+      margin-right: 74px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    >.rating__rate-wrapper{
+      margin-right: 0;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+      @media screen and (min-width: $md-width){
+        display: block;
+        flex-basis: auto;
+        margin-left: 0;
+        margin-right: 74px;
+        margin-bottom: 0;
+      }
+    }
+    &__rate{
+      &-stars{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .rmp-icon--ratings{
+          font-size: 1.2rem;
+        }
+      }
+      &-mark{
+        padding-left: 20px;
+        font-weight: 600;
+        @media screen and (min-width: $md-width){
+          padding-left: 37px;
+        }
+      }
+    }
+    &__time{
+      &-rez{
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    &__date{
+      &-rez{
+        font-weight: 600;
+      }
+    }
+  }
+}

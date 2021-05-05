@@ -1,0 +1,130 @@
+
+.pagination-wrapper {
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.little-dot {
+
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  background: #BCBCBC;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 16px;
+  position: relative;
+  z-index: 1;
+  transition: background-color .3s;
+  &:hover,&:focus,&:active{
+    outline: none;
+  }
+  &:hover {
+    background: #2096F3;
+  }
+}
+
+.little-dot--first,
+.little-dot--last {
+  z-index: 0;
+  cursor: pointer;
+}
+
+
+.big-dot {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2096F3;
+  width: 27px;
+  height: 10px;
+  border-radius: 5px;
+  @media screen and (min-width: $lg-width){
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border: 1px solid rgba(32, 150, 243, 0.3);
+    border-radius: 16px;
+    left: -4px;
+    top: -4px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    border: 1px solid rgba(32, 150, 243, 0.1);
+    box-sizing: border-box;
+    border-radius: 20px;
+    left: -8px;
+    top: -8px;
+  }
+}
+
+.transition-next .big-dot, .transition-prev .big-dot {
+  animation: slide-next-prev 1s linear both;
+}
+
+.transition-prev .little-dot--first{
+  animation: dots-min-prev .4s linear both;
+}
+
+.transition-next .little-dot--last {
+  animation: dots-min-next .4s linear both;
+}
+
+@keyframes slide-next-prev {
+  from {
+    width: 27px;
+  }
+  30% {
+    width: 100px;
+  }
+  50% {
+    width: 27px;
+  }
+}
+
+@keyframes dots-min-prev {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dots-min-next {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

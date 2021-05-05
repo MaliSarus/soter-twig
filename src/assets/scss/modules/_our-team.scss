@@ -1,0 +1,108 @@
+.our-team{
+  padding: 50px 0;
+  @media screen and (min-width: $md-width){
+    padding: 140px 0 65px;
+  }
+
+  &__title{
+    color: $main-color;
+    margin-bottom: 25px;
+    @media screen and (min-width: $md-width){
+      margin-bottom: 50px;
+    }
+  }
+  &__container{
+    padding: 0;
+    @media screen and (min-width: $xl-width){
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+  &__slider{
+    padding: 0 calc(100vw * 0.165);
+    @media screen and (min-width: $sm-width){
+      padding: 0 calc(100vw * 0.065);
+    }
+    @media screen and (min-width: $xl-width) {
+      padding: 0;
+    }
+    .swiper-wrapper{
+      @media screen and (min-width: $xl-width) {
+        margin: 0 -12.5px;
+        width: auto;
+        min-width: 100%;
+      }
+    }
+  }
+  &__slide{
+    @media screen and (min-width: $xl-width){
+      flex-basis: calc(100% / 5);
+      padding: 0 12.5px;
+    }
+    .card{
+      border: none;
+      &__image{
+        position: relative;
+        margin-bottom: 23px;
+        img{
+          width: 100%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      &__contacts{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        height: 38px;
+        overflow: hidden;
+        text-decoration: none;
+        &:hover{
+          .card__contacts-text{
+            text-decoration: none;
+            background: $main-color;
+          }
+        }
+        &-icon{
+          padding: 11px 14px;
+          line-height: 1;
+          background-color: $main-color;
+          img{
+            display: block;
+            width: 16px;
+            height: 16px;
+          }
+        }
+        &-text{
+          display: flex;
+          align-items: center;
+          line-height: 120%;
+          color: white;
+          font-size: 12px;
+          font-weight: 500;
+          padding: 0 15px;
+          background-color: $accent-color;
+          text-decoration: none;
+          transition: background-color .25s;
+        }
+      }
+      &__desc{
+        small{
+          font-size: 14px;
+          line-height: 120%;
+          color: $accent-color;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 7px;
+        }
+        p{
+          font-size: 20px;
+          line-height: 120%;
+          font-weight: 500;
+          color: black;
+        }
+      }
+    }
+  }
+}

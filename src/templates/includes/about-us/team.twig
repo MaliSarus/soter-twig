@@ -1,0 +1,42 @@
+<section class="our-team">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="our-team__title">
+          <h2>Leadership Team</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-xl our-team__container">
+    <div class="row">
+      <div class="col-12">
+        <div class="our-team__slider-block">
+          <div class="our-team__slider swiper-container">
+            <div class="swiper-wrapper">
+              {% for teamItem in team %}
+                <div class="our-team__slide swiper-slide">
+                  <div class="card">
+                    <div class="card__image">
+                      <img src="./assets/img/our-team/{{ teamItem.image }}" alt="">
+                      <a href="#" class="card__contacts">
+                        <div class="card__contacts-icon">
+                          <img src="./assets/img/our-team/in.svg" alt="">
+                        </div>
+                        <div class="card__contacts-text">LinkedIn</div>
+                      </a>
+                    </div>
+                    <div class="card__desc">
+                      <small>{{ teamItem.position }}</small>
+                      <p>{{ teamItem.name }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

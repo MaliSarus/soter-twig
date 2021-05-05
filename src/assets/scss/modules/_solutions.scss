@@ -1,0 +1,101 @@
+.solutions {
+  padding: 50px 0;
+  @media screen and (min-width: $md-width) {
+    padding: 100px 0;
+  }
+
+  &__top {
+    text-align: center;
+    margin-bottom: 25px;
+    @media screen and (min-width: $md-width){
+      margin-bottom: 50px;
+    }
+
+    span {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      max-width: 1090px;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 120%;
+      @media screen and (min-width: $md-width) {
+        line-height: 120%;
+        font-size: 55px;
+      }
+    }
+
+    p {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    &::after {
+      margin-top: 17px;
+      margin-bottom: 31px;
+      @media screen and (min-width: $md-width) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-bottom: -26px;
+    @media screen and (min-width: $md-width) {
+      margin: 0 -15px;
+      margin-bottom: -26px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 26px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    border-radius: 3px;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media screen and (min-width: $lg-width) {
+      height: 330px;
+    }
+  }
+
+  &__text {
+    background: #FFFFFF;
+    box-shadow: 0px 19px 41px rgba(0, 82, 180, 0.06);
+    border-radius: 3px;
+    width: calc(100% - 16px * 2);
+    box-sizing: border-box;
+    padding: 16px 19px;
+    position: relative;
+    margin: -30px auto 0 auto;
+    flex-grow: 1;
+    text-align: center;
+    @media screen and (min-width: $md-width) {
+      margin-top: -15px;
+      text-align: left;
+      padding: 17px 19px 17px 30px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 160%;
+      color: $main-color;
+      @media screen and (min-width: $md-width) {
+        font-size: 18px;
+      }
+    }
+  }
+}

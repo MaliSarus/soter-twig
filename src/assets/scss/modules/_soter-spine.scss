@@ -1,0 +1,131 @@
+.spine {
+  overflow: hidden;
+  padding: 60px 0;
+  background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
+  @media screen and (min-width: $lg-width) {
+    padding: 120px 0;
+    position: relative;
+    &::before, &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      z-index: 0;
+    }
+    &::before {
+      background: url("../img/soter-spine/bg-bottom-left.svg") left bottom / auto 100% no-repeat;
+      height: 100%;
+      width: 100%;
+      max-width: 938px;
+      bottom: 0;
+      left: 0;
+    }
+    &::after{
+      background: url("../img/soter-spine/bg-top-right.svg") right top / auto no-repeat;
+      height: 100%;
+      width: 100%;
+      max-width: 938px;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $lg-width){
+      justify-content: flex-start;
+    }
+    &-item{
+      >*{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      >h1{
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        color: white;
+        max-width: 265px;
+        margin: 0 auto 24px;
+        @media screen and (min-width: $md-width){
+          max-width: none;
+        }
+        @media screen and (min-width: $lg-width){
+          margin: 0 0 30px;
+          font-size: 40px;
+          line-height: 130%;
+          text-align: left;
+        }
+      }
+      p{
+        font-size: 14px;
+        line-height: 160%;
+        text-align: center;
+        margin-bottom: 19px;
+        max-width: 244px;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: $md-width){
+          max-width: 628px;
+        }
+        @media screen and (min-width: $lg-width){
+          margin-left: 0;
+          margin-right: 0;
+          font-size: 16px;
+          max-width: 530px;
+          line-height: 160%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &__image{
+    margin-top: 36px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $lg-width){
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+    //@media screen and (min-width: $xl-width){
+    //  padding-right: 0;
+    //}
+    &-item{
+      position: relative;
+      &::after{
+        right: -30px;
+        bottom: -17px;
+        z-index: 1;
+        display: block;
+        position: absolute;
+        content: '';
+        width: 160px;
+        height: 127px;
+        background: url("../img/soter-spine/image-balls.svg") center / contain no-repeat;
+        @media screen and (min-width: $lg-width){
+          width: 392px;
+          height: 310px;
+          right: -75px;
+          bottom: -38px;
+        }
+      }
+      img{
+        max-width: 100%;
+        filter: drop-shadow(44px 30px 36px rgba(0, 0, 0, 0.21));
+        position: relative;
+        z-index: 2;
+        max-height: 307px;
+        @media screen and (min-width: $lg-width){
+          max-height: none;
+        }
+      }
+
+
+    }
+  }
+}

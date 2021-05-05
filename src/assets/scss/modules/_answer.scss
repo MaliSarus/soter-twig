@@ -1,0 +1,77 @@
+.answer{
+  padding-top: 53px;
+  padding-bottom: 98px;
+  @media screen and (min-width: $lg-width){
+    padding-top: 165px;
+    padding-bottom: 232px;
+  }
+  &__block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    >*{
+      text-align: center;
+      color: $main-color;
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 28px;
+      @media screen and (min-width: $md-width){
+        width: 160px;
+        height: 160px;
+        margin-bottom: 43px;
+      }
+    }
+    h1{
+      font-size: 25px;
+      line-height: 111.2%;
+      margin-bottom: 10px;
+      @media screen and (min-width: $md-width){
+        font-size: 64px;
+        margin-bottom: 5px;
+      }
+    }
+    h2{
+      font-size: 20px;
+      line-height: 111.2%;
+      margin-bottom: 10px;
+      @media screen and (min-width: $md-width){
+        font-size: 23px;
+        margin-bottom: 12px;
+      }
+    }
+    p{
+      font-size: 14px;
+      line-height: 160%;
+      margin-bottom: 28px;
+      @media screen and (min-width: $md-width){
+        font-size: 18px;
+        max-width: 701px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+      }
+      >a{
+        color: #2096F3;
+        text-decoration: underline;
+        transition: color .25s;
+        font-weight: 500;
+        &:hover{
+          color: lighten($main-color, 10);
+        }
+      }
+    }
+    a.button{
+      color: white;
+      width: calc(100% - 32px);
+      margin: 0 auto;
+      @media screen and (min-width: $md-width){
+        width: auto;
+      }
+    }
+  }
+}

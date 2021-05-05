@@ -1,0 +1,396 @@
+.button {
+  //height: 62px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  outline:none;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  padding: 23px 38px;
+  @media screen and (min-width: $lg-width){
+    //height: 68px;
+    font-size: 16px;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+  &_blue{
+    color: white;
+    transition: background 1s;
+    position: relative;
+    background: none;
+    z-index: 1;
+    //border: 2px solid transparent;
+    padding: 25px 39px;
+    //padding-left: 0;
+    //padding-right: 0;
+    //@media screen and (min-width: $lg-width){
+    //  padding-left: 0;
+    //  padding-right: 0;
+    //}
+    &::before{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      content: '';
+      background: linear-gradient(90deg, $accent-color 0%, #0851BF 100%);
+      opacity: 1;
+      z-index: -1;
+      transition: opacity .5s;
+
+    }
+    &::after{
+      display: inline-block;
+      content: url('../img/interface/btn-arrow-white.svg');
+      margin-left: 23px;
+      transform: translateY(1px)
+    }
+    &:hover{
+      background: #2295F2;
+      color: white;
+      &::before{
+        opacity: 0;
+        //transition: opacity .5s;
+      }
+    }
+    &:active{
+      background: #0851BF;
+    }
+  }
+  &_tr{
+    color: white;
+    background: rgba(0,0,0,0);
+    border: 2px solid #FFFFFF;
+    transition: background .5s, color .5s , border-color .5s;
+    &:hover{
+      background: white;
+      color: $accent-color;
+      border-color: transparent;
+    }
+    &:active{
+      color: $main-color;
+      background: #E2EEFF;
+      border-color: transparent;
+    }
+  }
+  &_white{
+    background: white;
+    border: 2px solid #FFFFFF;
+    color: $accent-color;
+    transition: background .5s, color .5s , border-color .5s;
+    &::after{
+      display: inline-block;
+      content: url('../img/interface/btn-arrow-blue.svg');
+      margin-left: 23px;
+      transform: translateY(1px);
+      transition: filter .5s;
+    }
+    &:hover{
+      background: transparent;
+      color: white;
+      &::after{
+        filter: grayscale(1) brightness(6.5);
+      }
+    }
+    &:active{
+      color: $main-color;
+      background: #E2EEFF;
+      border-color: transparent;
+      &::after{
+        filter: brightness(0.3);
+      }
+    }
+  }
+  &_color_dark{
+    color: $main-color;
+    &::after{
+      filter: brightness(0.3);
+    }
+    &:hover{
+      background: transparent;
+      color: white;
+      &::after{
+        filter: grayscale(1) brightness(6.5);
+      }
+    }
+    &:active{
+      color: $accent-color;
+      background: transparent;
+      border-color: $accent-color;
+      &::after{
+        filter: none;
+      }
+    }
+  }
+}
+
+.link{
+  text-decoration: none;
+  &_grey{
+    color: #8FA1BF;
+    transition: color .25s;
+    &:hover{
+      color: $accent-color;
+    }
+  }
+}
+
+.title{
+  &_light{
+    color: white;
+  }
+  &_dark{
+    color: $main-color;
+  }
+}
+
+.text{
+  line-height: 160%;
+  color: #1F2E48;
+  &_light{
+    color: white;
+  }
+  &_accent{
+    color: $accent-color;
+  }
+}
+
+.arrows{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  .arrow{
+    cursor: pointer;
+    height: auto;
+    width: 20px;
+    background: url("../img/interface/arrow.svg") center no-repeat;
+    background-size: contain;
+    transition: transform .25s, filter .1s;
+    &:active{
+      filter: sepia(1) hue-rotate(184deg) saturate(15.5) contrast(0.6) hue-rotate(24deg) saturate(1.5);
+    }
+    &:hover{
+      transform: scale(1.3);
+    }
+    &-next{
+      transform: rotate(180deg);
+      &:hover{
+        transform: rotate(180deg) scale(1.3);
+      }
+    }
+  }
+}
+
+.swiper-nav{
+  transform: translateY(-50%);
+  outline: none;
+  width: auto;
+  overflow: visible;
+  &::after{
+    content: '';
+    background: url("../img/interface/arrow.svg") center no-repeat;
+    width: 13px;
+    height: 100%;
+    transition: transform .25s, background .25s, width .25s;
+    outline: none;
+  }
+  &:active{
+    filter: sepia(1) hue-rotate(184deg) saturate(15.5) contrast(0.6) hue-rotate(24deg) saturate(1.5);
+  }
+  //&:hover{
+  //  width: calc(12px * 1.5);
+  //}
+
+}
+.swiper-button-prev{
+  &:hover{
+    &::after{
+      transform: scale(1.5);
+    }
+  }
+}
+.swiper-button-next{
+  &::after{
+    transform: rotate(180deg);
+  }
+  &:hover{
+    &::after{
+      transform: scale(1.5) rotate(180deg);
+    }
+  }
+}
+
+.with-dots{
+  &::after{
+    display: block;
+    background: url("../img/interface/three-dots.svg") center / contain no-repeat;
+    content: '';
+    margin: 0 auto;
+    width: 44px;
+    height: 8px;
+    @media screen and (min-width: $md-width){
+      width: 50px;
+      height: 10px;
+    }
+  }
+}
+
+.p-15{
+  padding: 0 20px;
+  @media screen and (min-width: $md-width){
+    padding: 0 15px;
+  }
+}
+
+.p-sx-30{
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: $lg-width){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.hidden{
+  overflow: hidden;
+}
+
+.valid{
+  color:springgreen!important;
+  &::after{
+    background-color: springgreen!important;
+  }
+}
+
+.invalid{
+  font-weight: bold;
+  color: #e92731 !important;
+  &::after{
+    background-color: #e92731!important;
+  }
+}
+
+
+
+.balls{
+  &-bl-sm{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: url("../img/interface/balls-bl-sm-mobile.svg");
+      display: block;
+      bottom: 0;
+      right: 0;
+      @media screen and (min-width: 390px){
+        content: url("../img/interface/balls-bl-sm-desktop.svg");
+        bottom: 8px;
+      }
+      @media screen and (min-width: $xl-width){
+        bottom: 18px;
+      }
+    }
+  }
+  &-br-sm{
+    width: calc(100% - 40px);
+    @media screen and (min-width: 454px){
+      width: auto;
+    }
+    &::after{
+      position: absolute;
+      content: url("../img/interface/balls-br-sm-mobile.svg");
+      display: block;
+      bottom: 18px;
+      left: 0;
+      @media screen and (min-width: 390px){
+        content: url("../img/interface/balls-br-sm-desktop.svg");
+        left: -59px;
+      }
+    }
+  }
+}
+
+.header_static{
+  position: static;
+  padding-bottom: 14px;
+  background: #051834;
+  @media screen and (min-width: $lg-width){
+    padding-bottom: unset;
+  }
+}
+
+.align-left{
+  text-align: left!important;
+}
+.align-right{
+  text-align: right!important;
+}
+.align-center{
+  text-align: center!important;
+}
+
+img.align-left{
+  display: inline-block;
+  float: left;
+  margin: 10px 10px 10px 0;
+  @media screen and (min-width: $md-width){
+    margin: 20px 20px 20px 0;
+  }
+}
+img.align-right{
+  display: inline-block;
+  float: right;
+  margin: 10px 0 10px 10px;
+  @media screen and (min-width: $md-width){
+    margin: 20px 0 20px 20px;
+  }
+}
+
+img.align-center{
+  display: block;
+  margin: 10px auto;
+  @media screen and (min-width: $md-width){
+    margin: 20px auto;
+  }
+}
+
+.success-image{
+  width: 100%;
+  min-height: 220px;
+  max-width: 220px;
+  max-height: 220px;
+  background: url("../img/request/success.svg") center / contain no-repeat;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: .24;
+  display: none;
+  @media screen and (min-width: $lg-width){
+    min-height: unset;
+    max-height: none;
+    max-width: none;
+    margin: 0;
+    opacity: 1;
+    margin-bottom: 34px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.wrapper_flex{
+  flex-wrap: wrap;
+}

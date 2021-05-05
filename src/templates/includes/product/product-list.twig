@@ -1,0 +1,29 @@
+<section class="product-list">
+  <div class="container">
+    {% for product in products %}
+      <div class="row ">
+        <div class="col-12 col-lg-6 d-flex align-items-center">
+          <div class="product-list__description">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.text }}</p>
+            <ul>
+              {% for feature in product.features %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="product-list__image {{ product.image.classes }}">
+            <img
+                {% if product.image.position %}
+                  data-position="{{ product.image.position[0] }}; {{ product.image.position[1] }};"
+                {% endif %}
+                src="./assets/img/product-list/{{ product.image.src }}" alt=""
+            >
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

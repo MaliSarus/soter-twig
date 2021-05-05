@@ -1,0 +1,30 @@
+<section class="our-interests">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="our-interests__title">
+          <h2>What interested us?</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="our-interests__list">
+          {% for interest in interests %}
+            <div class="our-interests__item">
+              <article class="card">
+                <div class="card__image">
+                  <img src="./assets/img/our-interests/{{ interest.image }}" alt="">
+                </div>
+                <div class="card__text">
+                  <h3>{{ interest.title }}</h3>
+                  <p>{{ interest.text }}</p>
+                </div>
+              </article>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

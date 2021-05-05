@@ -1,0 +1,101 @@
+.successes{
+  padding-top: 48px;
+  padding-bottom: 59px;
+  @media screen and (min-width: $lg-width){
+    padding-top: 104px;
+    padding-bottom: 117px;
+  }
+  &__top{
+    text-align: center;
+    &::after{
+      margin-top: 7px;
+      margin-bottom: 21px;
+      @media screen and (min-width: $md-width){
+        margin-top: 21px;
+        margin-bottom: 77px;
+      }
+    }
+    h2{
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+  &__content{
+    text-align: center;
+    @media screen and (min-width:$lg-width){
+      padding: 0 0 0 40px;
+      text-align: left;
+    }
+    >h3{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 140%;
+      @media screen and (min-width: $md-width){
+        font-size: 25px;
+        max-width: 505px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 140%;
+      }
+      @media screen and (min-width: $lg-width){
+        margin-left: unset;
+        margin-right: unset;
+      }
+    }
+    >p{
+      margin-top: 13px;
+      @media screen and (min-width: $md-width){
+        max-width: 505px;
+        font-size: 16px;
+        line-height: 160%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:25px;
+      }
+      @media screen and (min-width: $lg-width){
+        margin-left: unset;
+        margin-right: unset;
+      }
+    }
+  }
+  &__button{
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-top: 34px;
+    @media screen and (min-width: $md-width){
+      display: inline-block;
+      margin-top: 42px;
+      width: auto;
+      padding: 23px 42px 23px 39px;
+      //max-width: 266px;
+    }
+    @media screen and (min-width: $lg-width){
+      padding-top: 25px;
+      margin: 0;
+      margin-top: 42px;
+    }
+    //&.wp{
+    //  @media screen and (min-width: $md-width){
+    //    max-width: 352px;
+    //  }
+    //}
+  }
+  &__video{
+    margin-top: 31px;
+    height: 280px;
+    display: flex;
+    @media screen and (min-width: $md-width){
+      min-height: 400px;
+      height: 100%;
+    }
+    @media screen and (min-width: $lg-width){
+      margin-top: 0;
+    }
+    img{
+      width: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: top;
+    }
+  }
+}

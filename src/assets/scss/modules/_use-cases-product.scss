@@ -1,0 +1,75 @@
+.use-cases-product{
+  padding: 50px 0;
+  @media screen and (min-width: $lg-width){
+    padding: 90px 0;
+  }
+  &__text{
+    >*{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    h2{
+      text-align: center;
+      color: $main-color;
+      margin-bottom: 16px;
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+        margin-bottom: 29px;
+      }
+    }
+    p{
+      text-align: center;
+      color: $main-color;
+      margin-bottom: 18px;
+      line-height: 160%;
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+        font-size: 22px;
+        margin-bottom: 29px;
+      }
+    }
+    img{
+      width: 100%;
+      object-fit: contain;
+      max-height: 383px;
+      @media screen and (min-width: $lg-width){
+        max-height: 547px;
+      }
+    }
+    ul{
+      margin: 18px;
+      @media screen and (min-width: $lg-width){
+        margin: 29px;
+      }
+    }
+    a.button{
+      margin-top: 10px;
+      display: block;
+      @media screen and (min-width: $sm-width){
+        //max-width: 213px;
+        margin: 10px auto 0;
+        width: fit-content;
+      }
+      @media screen and (min-width: $lg-width){
+        margin: unset;
+      }
+    }
+  }
+  &__image{
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    @media screen and (min-width: $lg-width){
+      margin-top: 0;
+    }
+    img{
+      width: 100%;
+      object-fit: contain;
+      max-height: 383px;
+      @media screen and (min-width: $lg-width){
+        max-height: 547px;
+      }
+    }
+  }
+}

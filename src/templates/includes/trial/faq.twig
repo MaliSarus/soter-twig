@@ -1,0 +1,24 @@
+<section class="faq">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="faq__head">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="faq__list">
+          <ul>
+            {% for faqItem in faq %}
+              <li >{{ faqItem.question }}
+                <p>{{ faqItem.answer }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

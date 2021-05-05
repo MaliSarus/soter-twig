@@ -1,0 +1,96 @@
+<section class="safety">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="safety__title">
+          <h2>The End-to-End Solution for Ergonomic Safety</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="safety__circle-block">
+    <div class="container">
+      <div class="col-12">
+        <div class="circle">
+          <div class="circle__content">
+            <div class="safety__subtitle">
+              <img src="./assets/img/safety/icon.svg" alt="">
+              <p>Soter suits every stage of <br>the employee work cycle</p>
+            </div>
+          </div>
+          <div class="circle__wrapper">
+            {% for element in safety %}
+              <div class="circle__element">
+                <div class="circle__element-icon">
+                  <img src="./assets/img/safety/{{ element.icon }}" alt="">
+                </div>
+                <div class="circle__element-content">
+                  <h3>{{ element.title }}</h3>
+                  <h4>{{ element.subtitle }}</h4>
+                  <p>{{ element.text }}</p>
+                  <div class="circle__element-hidden">
+                    <ul>
+                      {% for feature in element.features %}
+                        <li>{{ feature }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="safety__slider-block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="safety__subtitle">
+            <img src="./assets/img/safety/icon.svg" alt="">
+            <p>Soter suits every stage of <br>the employee work cycle</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 p-0">
+          <div class="safety__slider swiper-container">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-wrapper">
+              {% for element in safety %}
+                <div class="swiper-slide">
+                  <div class="safety__slider-slide">
+                    <div class="slide__head">
+                      <div class="slide__head-icon">
+                        <img src="./assets/img/safety/{{ element.icon }}" alt="">
+                      </div>
+                      <h3>{{ element.title }}</h3>
+                      <h4>{{ element.subtitle }}</h4>
+                      <p>{{ element.text }}</p>
+                    </div>
+                    <ul>
+                      {% for feature in element.features %}
+                        <li>{{ feature }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="pagination-wrapper">
+            <div class="pagination-container">
+              <div class="little-dot nav-dot little-dot--first"></div>
+              <div class="little-dot">
+                <div class="big-dot"></div>
+              </div>
+              <div class="little-dot nav-dot little-dot--last"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

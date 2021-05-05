@@ -1,0 +1,217 @@
+.request{
+  background: linear-gradient(90deg, #2096F3 0%, #2855C5 49.48%, #0851BF 100%);
+  padding-top: 41px;
+  padding-bottom: 58px;
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: $lg-width){
+    padding-top: 115px;
+    padding-bottom: 102px;
+    overflow: hidden;
+  }
+  &::before{
+    position: absolute;
+    left: -20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    @media screen and (min-width: $lg-width){
+      display: block;
+      content: url("../img/request/map-left.svg");
+    }
+  }
+
+  &::after{
+    display: block;
+    content: '';
+    height: calc(100% / 4);
+    width: calc(100% / 1.4);
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+    background: url("../img/request/map-mobile.svg") bottom right / contain no-repeat;
+    @media screen and (min-width: $lg-width){
+      width: auto;
+      height: auto;
+      background: none;
+      content: url("../img/request/map-right.svg");
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+  &_success{
+    padding-top: 117px;
+    padding-bottom: 117px;
+    @media screen and (min-width: $lg-width ){
+      padding-top: 115px;
+      padding-bottom: 146px;
+    }
+    .request__top{
+      margin-bottom: 0;
+    }
+  }
+  &__top{
+    text-align: center;
+    margin-bottom: 24px;
+    @media screen and (min-width: $lg-width){
+      text-align: left;
+      margin-bottom: 46px;
+    }
+    >h2{
+      line-height: 120%;
+    }
+    >p{
+      @media screen and (min-width: $md-width){
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+  &__block{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    form{
+      button{
+        width: 100%;
+        @media screen and (min-width: $md-width){
+          width: auto;
+          margin: 0 auto;
+        }
+        @media screen and (min-width: $lg-width){
+          margin: unset;
+        }
+      }
+    }
+  }
+  &__form-row{
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: $lg-width){
+      margin: 0 -25px;
+    }
+    &:last-child{
+      @media screen and (min-width: $lg-width){
+        margin-bottom: 35px;
+        margin: 0 -25px;
+      }
+    }
+  }
+  &__input-wrapper{
+    margin-bottom: 30px;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 100%;
+    &::after{
+      display: block;
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #8ECDFF;
+      @media screen and (min-width: $lg-width){
+        left: 25px;
+        width: calc(100% - 50px);
+      }
+    }
+    &::before{
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (min-width: $lg-width){
+        right: 35px;
+      }
+    }
+    &.request__company{
+      &::before{
+        content: url("../img/request/company-icon.svg");
+      }
+    }
+    &.request__phone{
+      &::before{
+        content: url("../img/request/phone-icon.svg");
+      }
+    }
+    &.request__mail{
+      &::before{
+        content: url("../img/request/mail-icon.svg");
+      }
+    }
+
+
+    @media screen and (min-width: $lg-width){
+      flex-basis: 50%;
+      margin-bottom: 41px;
+      padding: 0 25px;
+    }
+    input{
+      width: calc(100% - 30px);
+    }
+    textarea{
+      resize: none;
+      overflow: hidden;
+    }
+    label{
+      color: white;
+      position: absolute;
+      top: 0;
+      padding: .375rem 0;
+      opacity: 1;
+      pointer-events: none;
+      transition: opacity .5s;
+      font-size: 14px;
+      @media screen and (min-width: $md-width){
+        font-size: 16px;
+      }
+    }
+  }
+  &__input{
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: unset;
+    padding-left: 0;
+    padding-right: 0;
+    color: white;
+    &:focus{
+      background: none;
+      border: none;
+      outline: none;
+      border-radius: unset;
+      box-shadow: none;
+      color: white;
+    }
+    &:focus ~ label,
+    &:valid ~ label{
+      opacity: 0;
+    }
+  }
+  &__message{
+    .request__input{
+      &:focus ~ label{
+        opacity: 0!important;
+      }
+      &:valid ~ label{
+        opacity: 1;
+      }
+    }
+  }
+  &__bottom{
+    >p {
+      color: #8ECDFF;
+      margin-top: 18px;
+      font-size: 10px;
+      line-height: 155.5%;
+      text-align: center;
+      box-sizing: border-box;
+      @media screen and (min-width: $lg-width) {
+        text-align: left;
+        font-size: 12px;
+        margin-top: 24px;
+      }
+    }
+  }
+}

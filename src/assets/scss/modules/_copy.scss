@@ -1,0 +1,261 @@
+.copy{
+  @media screen and (min-width: $lg-width){
+    padding: 105px 0;
+  }
+  &__success{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 30px;
+    background: #F6FAFF;
+    border-radius: 5px;
+    @media screen and (min-width: $md-width){
+      border-radius: 3px;
+      padding: 41px 45px;
+    }
+    img{
+      width: 67px;
+      height: 67px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-bottom: 15px;
+    }
+    p{
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    small{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 28px;
+    }
+    a{
+      width: 100%;
+    }
+
+
+  }
+
+  &__text{
+    display: flex;
+    padding: 52.5px 20px;
+
+    @media screen and (min-width: $lg-width){
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &-item{
+      color: $main-color;
+      width: 100%;
+      >*{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      h2{
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 120%;
+        margin-bottom: 25px;
+        text-align: center;
+        @media screen and (min-width:$md-width){
+          font-size: 55px;
+          margin-bottom: 54px;
+        }
+        @media screen and (min-width: $lg-width){
+          text-align: left;
+        }
+      }
+      ul{
+        padding-left: 0;
+        li{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 26px;
+          text-align: center;
+          @media screen and (min-width: $md-width){
+            font-size: 18px;
+            line-height: 141.5%;
+          }
+          @media screen and (min-width: $lg-width){
+            position: relative;
+            max-width: 391px;
+            padding-left: 105px;
+            font-weight: 500;
+            margin-bottom: 58px;
+            text-align: left;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+          &:before{
+            position: static;
+            width: auto;
+            height: auto;
+            max-height: none;
+            display: block;
+            max-width: none;
+            max-height: none;
+            font-size: 40px;
+            line-height: 120%;
+            background: linear-gradient(90deg, #2095F2, #0851BF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            content: attr(data-step);
+            margin: 0;
+            font-weight: 900;
+            @media screen and (min-width: $md-width){
+              font-size: 61px;
+            }
+            @media screen and (min-width: $lg-width){
+              position: absolute;
+              left: 0;
+              top: 50%;
+              align-items: center;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__form{
+    padding: 0;
+    @media screen and (min-width: $md-width){
+      padding: 0 20px;
+    }
+    @media screen and (min-width: $lg-width){
+      //padding-right: 0;
+      display: flex;
+      align-items: flex-start;
+    }
+    form{
+      box-sizing: border-box;
+      position: relative;
+      background: #F6FAFF;
+      padding: 34px 30px;
+      @media screen and (min-width: $md-width){
+        border-radius: 3px;
+        padding: 41px 45px;
+      }
+      &::before{
+        display: block;
+        position: absolute;
+        content:'';
+        height: 3px;
+        width: 46px;
+        background: #2096F3;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (min-width: $lg-width){
+          left: 50px;
+          transform: none;
+        }
+      }
+      >p{
+        color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 33px;
+        @media screen and (min-width: $md-width){
+          margin-bottom: 26px;
+        }
+        @media screen and (min-width: $lg-width){
+          text-align: left;
+        }
+      }
+      >small{
+        font-size: 10px;
+        line-height: 155.5%;
+        display: block;
+        color: $main-color;
+      }
+      button{
+        margin-top: 11px;
+        margin-bottom: 20px;
+        width: 100%;
+        @media screen and (min-width: $md-width){
+          margin-bottom: 22px;
+        }
+      }
+    }
+    .request {
+      &__form-row{
+        margin: 0;
+      }
+      &__input-wrapper{
+        padding: 0;
+        overflow: hidden;
+        margin-bottom: 15px;
+        @media screen and (min-width: $md-width){
+          flex-basis: 100%;
+          margin-bottom: 25px;
+        }
+        &::before{
+          display: none;
+          content: '';
+        }
+        &::after{
+          width: 100%;
+          left: 0;
+        }
+        &.request__user{
+          &::before{
+            content: url("../img/try-soter/company-icon.svg");
+          }
+        }
+        &.request__company{
+          &::before{
+            content: url("../img/try-soter/company-icon.svg");
+          }
+        }
+        &.request__phone{
+          &::before{
+            content: url("../img/try-soter/phone-icon.svg");
+          }
+        }
+        &.request__mail{
+          &::before{
+            content: url("../img/try-soter/mail-icon.svg");
+          }
+        }
+        label{
+          color: $main-color;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 120%;
+          @media screen and (min-width: $md-width) {
+
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+      &__input{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        width: 100%;
+        color: $main-color;
+        height: auto;
+        padding: 11px 0;
+      }
+    }
+  }
+}

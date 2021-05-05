@@ -1,0 +1,118 @@
+.phases{
+  background: $main-color;
+  padding: 55px 0;
+  @media screen and (min-width: $md-width){
+    padding: 100px 0;
+  }
+  &__top{
+    margin-bottom: 30px;
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 68px;
+    }
+  }
+  &__head{
+    &-title{
+      h2{
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+        @media screen and (min-width: $md-width){
+          font-size: 55px;
+          line-height: 120%;
+        }
+        @media screen and (min-width: $lg-width){
+          text-align: left;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-text{
+      color: white;
+      >*{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      p{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        text-align: center;
+        margin-bottom: 20px;
+        @media screen and (min-width: $md-width){
+          font-size: 16px;
+          line-height: 160%;
+        }
+        @media screen and (min-width: $lg-width){
+          text-align: left;
+        }
+      }
+    }
+  }
+  &__list{
+    margin-bottom: 28px;
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 41px;
+    }
+    ol{
+      padding: 0;
+      counter-reset: myCounter;
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (min-width:$md-width){
+        margin: 0 -12.5px;
+      }
+      li{
+        list-style: none;
+        display: list-item;
+        background: #253D64;
+        border-radius: 5px;
+        //display: block;
+        color: white;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 152.5%;
+        text-align: center;
+        min-height: 200px;
+        padding: 25px 28px;
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        @media screen and (min-width:$md-width){
+          flex-basis: calc(100% / 3 - 25px);
+          margin:0 12.5px;
+        }
+        @media screen and (min-width: $lg-width){
+          padding: 28px 34px;
+          text-align: left;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &::before{
+          margin: 0 0 15px;
+          display: block;
+          //content: attr(data-num);
+          counter-increment: myCounter;
+          content:"phase " counter(myCounter);
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 120%;
+          text-align: center;
+          text-transform: uppercase;
+          @media screen and (min-width:$lg-width){
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  a.button{
+    width: calc(100% - 20px);
+    @media screen and (min-width: $md-width){
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include "../includes/head.twig" %}
+</head>
+<body>
+<style type="text/css">
+  .header{
+    position: static !important;
+    padding-bottom: 14px;
+    background: #051834;
+  }
+
+  @media screen and (min-width: 992px) {
+    .header{
+      padding-bottom: unset;
+    }
+  }
+</style>
+{% include "../includes/header.twig" %}
+
+<!-- MAIN -->
+<main>
+  {% block content %}
+  {% endblock %}
+</main>
+
+
+{#<!-- FOOTER -->#}
+{% include "../includes/modals.twig" %}
+{% include "../includes/footer.twig" %}
+{% include "../includes/scripts.twig" %}
+</body>
+</html>

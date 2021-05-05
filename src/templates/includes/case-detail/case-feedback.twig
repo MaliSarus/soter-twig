@@ -1,0 +1,48 @@
+<section class="case-feedback pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% for feedback in feedbacks %}
+          <div class="case-feedback__block">
+            <div class="case-feedback__title">
+              <h2>{{ feedback.title }}</h2>
+            </div>
+            <div class="case-feedback__content">
+              <div class="case-feedback__column">
+                <div class="case-feedback__desc">
+                  {% if feedback.logo %}
+                    <img src="./assets/img/clients/{{ feedback.logo }}" alt="" class="case-feedback__desc-logo">
+                  {% endif %}
+
+                  <p>{{ feedback.text }}</p>
+
+                  {% if feedback.message %}
+                    <div class="case-feedback__feedback">
+                      <div class="feedback-head">
+                        <div class="feedback-head__image">
+                          <img src="{{ feedback.message.image }}" alt="">
+                        </div>
+                        <div class="feedback-head__info">
+                          <h3>{{ feedback.message.name }}</h3>
+                          <p>{{ feedback.message.position }}</p>
+                        </div>
+                      </div>
+                      <div class="feedback-text">
+                        <p>{{ feedback.message.text }}</p>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="case-feedback__column">
+                <div class="case-feedback__image no-balls">
+                  <img src="./assets/img/case-feedback/{{ feedback.image }}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

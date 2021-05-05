@@ -1,0 +1,97 @@
+.use-cases{
+  overflow: hidden;
+  .row{
+    padding: 25px 0;
+    @media screen and (min-width: $lg-width){
+      padding: 71.5px 0;
+    }
+    .use-cases__image{
+      &::after{
+        right: -45px;
+      }
+    }
+    &:first-child{
+      padding-top: 50px;
+      padding-bottom: 25px;
+      @media screen and (min-width: $lg-width){
+        padding-top: 143px;
+        padding-bottom: 71.5px;
+      }
+    }
+    &:last-child{
+      padding-top: 25px;
+      padding-bottom: 50px;
+      @media screen and (min-width: $lg-width){
+        padding-bottom: 143px;
+        padding-top: 71.5px;;
+      }
+    }
+    &:nth-child(2n){
+      flex-direction: row-reverse;
+      .use-cases__image{
+        &::after{
+          left: -45px;
+        }
+      }
+    }
+  }
+  &__text{
+    position: relative;
+    z-index: 1;
+    >*{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    h2{
+      text-align: center;
+      color: $main-color;
+      margin-bottom: 16px;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 29px;
+      }
+      @media screen and (min-width: $xl-width){
+        text-align: left;
+      }
+    }
+    p{
+      text-align: center;
+      color: $main-color;
+      margin-bottom: 18px;
+      line-height: 160%;
+      @media screen and (min-width: $md-width){
+        font-size: 18px;
+        margin-bottom: 29px;
+      }
+      @media screen and (min-width: $xl-width){
+        text-align: left;
+      }
+    }
+    ul{
+      margin: 18px;
+      @media screen and (min-width: $md-width){
+        margin: 29px;
+      }
+    }
+  }
+  &__image{
+    position: relative;
+    margin-top: 25px;
+    @media screen and (min-width: $xl-width){
+      margin-top: 0;
+    }
+    &::after{
+      position: absolute;
+      display: block;
+      content: url("../img/use-cases/balls.svg");
+      bottom: -45px;
+      z-index: 0;
+    }
+    img{
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

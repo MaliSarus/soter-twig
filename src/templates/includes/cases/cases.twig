@@ -1,0 +1,29 @@
+<section class="cases without-hover">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="cases__head">
+          <h2 class="title title_dark">Use Cases</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row cases__content">
+      {% for case in cases %}
+        <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
+          <div class="cases__item">
+            <div class="cases__item-content">
+              <div class="cases__image"><img src="./assets/img/cases/{{ case.icon }}" alt=""></div>
+              <div class="cases__text">
+                <h3>{{ case.title }}</h3>
+                <p class="text">
+                  {{ case.text }}
+                </p>
+              </div>
+            </div>
+
+            <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</section>

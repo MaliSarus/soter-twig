@@ -1,0 +1,36 @@
+<section class="smart pb_25">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="smart__top">
+          <h2>Smart Wearables
+            for Complete Safety</h2>
+          <p>Soter devices can be worn both on back or/and shoulder to prevent most of the musculoskeletal
+            disorders which can be got in the workplace</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="smart__content">
+          {% for smartItem in smart %}
+            <div class="smart__item">
+              <div class="smart__card">
+                <div class="smart__card-image">
+                  <img src="./assets/img/smart/{{ smartItem.image }}" alt="">
+                  <span class="smart__card-name">{{ smartItem.name }}</span>
+                </div>
+                <p><b>{{ smartItem.title }}</b></p>
+                <ul>
+                  {% for listItem in smartItem.list %}
+                    <li>{{ listItem }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

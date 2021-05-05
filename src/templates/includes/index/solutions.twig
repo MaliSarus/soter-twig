@@ -1,0 +1,24 @@
+<section class="solutions">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 solutions__top with-dots">
+        <span class="title title_dark">The Worlds First End-to-End Ergonomic Training Solution</span>
+        <p class="text">We are empowering organizations to prevent ergonomic injuries in the workplace by
+          providing them with valuable insights on injury risk and allowing them to continuously improve the
+          health and safety of the entire workforce</p>
+      </div>
+    </div>
+    <div class="row solutions__bottom">
+      {% for solution in solutions %}
+        <div class="col-12 col-md-4 p-15 d-flex">
+          <article class="solutions__item">
+            <div class="solutions__image" style="background-image: url(./assets/img/solutions/{{ solution.image }})"></div>
+            <div class="solutions__text">
+              <p>{{ solution.text }}</p>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,111 @@
+.products{
+  background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
+  padding-top: 52px;
+  padding-bottom: 58px;
+  overflow: hidden;
+  @media screen and (min-width: $lg-width){
+    padding-top: 119px;
+    padding-bottom: 108px;
+  }
+  &__block{
+    margin-bottom: 70px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .products__content{
+      @media screen and (min-width: $lg-width){
+        padding-left: 10px;
+      }
+    }
+    &:nth-child(2n){
+      @media screen and (min-width: $lg-width){
+          .products__content {
+            @media screen and (min-width: $lg-width) {
+              padding-left: 0;
+            }
+          }
+
+          .products__image {
+            img {
+              @media screen and (min-width: $xl-width){
+                margin-left: -10px;
+                max-width: none;
+                max-height: none;
+              }
+            }
+          }
+      }
+    }
+  }
+  &__content{
+    @media screen and (min-width: $lg-width){
+      padding: 75px 0;
+    }
+    >h2{
+      margin-bottom: 8px;
+      text-align: center;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 28px;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    >p{
+      text-align: center;
+      margin-bottom: 33px;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 53px;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    >.button{
+      width: 100%;
+      @media screen and (min-width: $md-width){
+        margin: 0 auto;
+        width: auto;
+        //max-width: 325px;
+      }
+      @media screen and (min-width: $lg-width){
+        margin: 0;
+      }
+    }
+  }
+  &__image{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 26px;
+    //height: 100%;
+    @media screen and (min-width: $lg-width){
+      max-height: unset;
+      justify-content: flex-start;
+      margin-bottom: 0;
+    }
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+      display: block;
+      @media screen and (min-width: $sm-width){
+        width: auto;
+      }
+      @media screen and (min-width: $lg-width){
+        object-fit: contain;
+      }
+    }
+  }
+  //.button_lower{
+  //  width: calc(100% - 20px);
+  //  margin: 0 auto;
+  //  @media screen and (min-width: $lg-width){
+  //    width: 100%;
+  //    max-width: 288px;
+  //    margin: 0;
+  //  }
+  //}
+}

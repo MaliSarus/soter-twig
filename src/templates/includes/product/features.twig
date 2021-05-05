@@ -1,0 +1,23 @@
+<section class="features">
+  <div class="container">
+    <div class="row features__block">
+      <div class="col-12">
+        <div class="features__row">
+          {% for feature in features %}
+            <div class="features__item">
+              <div class="features__item-image">
+                <img src="./assets/img/features/{{ feature.image }}" alt="Иконка преимущества">
+              </div>
+              <div class="features__item-text">
+                <h3>
+                  {{ feature.title }}
+                </h3>
+                <p>{{ feature.text }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include "../includes/head.twig" %}
+</head>
+<body>
+
+{% include "../includes/header.twig" %}
+
+<!-- MAIN -->
+<main>
+  {% block content %}
+  {% endblock %}
+</main>
+
+
+{#<!-- FOOTER -->#}
+{% include "../includes/modals.twig" %}
+{% include "../includes/footer.twig" %}
+{% include "../includes/scripts.twig" %}
+</body>
+</html>

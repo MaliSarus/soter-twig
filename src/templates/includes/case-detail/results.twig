@@ -1,0 +1,28 @@
+<section class="results">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="results__head">
+          <h2>Results</h2>
+          <p>The first longitudinal outcome data of impact of SoterSpine showed a 55% drop in manual handling
+            injuries in 2019.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="results__content">
+          {% for result in results %}
+            <div class="results__column">
+              <h3>{{ result.title }}</h3>
+              <p>{{ result.text }}</p>
+              <div class="results__image">
+                <img src="./assets/img/case-feedback/{{ result.image }}" alt="">
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

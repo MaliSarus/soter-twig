@@ -1,0 +1,94 @@
+.privacy {
+  padding-top: 55px;
+  padding-bottom: 66px;
+  @media screen and (min-width: $lg-width) {
+    padding-top: 90px;
+    padding-bottom: 143px;
+  }
+
+  .pagecontent {
+    >*{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    > h1 {
+      font-weight: bold;
+      font-size: 29px;
+      line-height: 120%;
+      text-align: center;
+      color: #11274B;
+      @media screen and (min-width: $md-width) {
+        text-align: left;
+        font-size: 64px;
+        line-height: 71px;
+        max-width: 645px;
+      }
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
+      color: #1F2E48;
+      max-width: 244px;
+      margin: 9px auto;
+      b{
+        font-weight: 500;
+      }
+      @media screen and (min-width: $md-width) {
+        margin: 16px;
+        margin-left: unset;
+        margin-right: unset;
+        text-align: left;
+        font-size: 21px;
+        line-height: 160%;
+        max-width: 645px;
+      }
+    }
+
+    > ul {
+      margin: 25px 0;
+      padding: 0;
+      @media screen and (min-width: $md-width) {
+        margin: 34px 0;
+      }
+      li{
+        padding-left: 0;
+        display: block;
+        list-style: none;
+        border-bottom: 1px solid #E2EEFF;
+        &:first-child{
+          border-top: 1px solid #E2EEFF;
+        }
+        &:before{
+          content: '';
+          display: none;
+        }
+        a{
+          padding: 14px 20px;
+          display: block;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 130%;
+          text-align: center;
+          color: #2096F3;
+          transition: background-color .25s, color .25s;
+          @media screen and (min-width: $md-width){
+            text-align: left;
+            padding: 28px 33px;
+            font-size: 18px;
+            line-height: 111.2%;
+          }
+          &:hover{
+            text-decoration: none;
+            background: #F6FAFF;
+          }
+          &:active{
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
