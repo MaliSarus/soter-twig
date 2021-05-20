@@ -731,6 +731,69 @@ const data = {
         text: 'The innovative wearable technology product helps Swissport boost manual handling safety by 70%'
       },
     ]
+  },
+  pricing:{
+    title: 'Pricing',
+    cards:[
+      {
+        title: 'Monthly',
+        type: 'month',
+        price:{
+          title: '$150/month',
+          subtitle: 'Billed monthly'
+        },
+        videos: {
+          title: '50 videos per month for processing'
+        },
+        length:{
+          title: 'Up to 2 minutes video length',
+          subtitle: '(and equal video size in Mb)'
+        },
+        button:{
+          title: 'TRY 14-DAY FREE',
+          subtitle: 'No credit card required'
+        }
+      },
+      {
+        title: 'Annual',
+        type: 'annual',
+        price:{
+          title: '$120/month',
+          subtitle: 'Billed annualy'
+        },
+        videos: {
+          title: '600 videos per year for processing',
+          subtitle: '(50 videos/month, shared across your organization)'
+        },
+        length:{
+          title: 'Up to 2 minutes video length',
+          subtitle: '(and equal video size in Mb)'
+        },
+        button:{
+          title: 'TRY 14-DAY FREE',
+          subtitle: 'No credit card required'
+        }
+      },
+      {
+        title: 'Enterprise',
+        type: 'enterprise',
+        price:{
+          title: 'Contact Us',
+          subtitle: 'Includes access to Job Dictionary'
+        },
+        videos: {
+          title: '5000+ videos per year for processing',
+          subtitle: '(no monthly limits)'
+        },
+        length:{
+          title: 'Up to 7.5 minutes video length',
+          subtitle: '(and equal video size in Mb)'
+        },
+        button:{
+          title: 'Contact us',
+        }
+      }
+    ]
   }
 }
 

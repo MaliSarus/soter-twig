@@ -1,0 +1,256 @@
+.pricing {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background-image: url("../img/pricing/bg.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size:auto 400px;
+  @media screen and (min-width: $lg-width){
+    padding-top: 0;
+    padding-bottom: 175px;
+    background-size: 100% auto;
+  }
+  &__head{
+    max-width: 728px;
+    text-align: center;
+    margin: 0 auto 40px;
+    color: $main-color;
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 85px;
+    }
+    h2{
+      margin-bottom: 10px;
+      @media screen and (min-width: $lg-width){
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 0;
+    @media screen and (min-width: $lg-width){
+      margin: 0;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 5px 0;
+    flex-basis: 100%;
+    @media screen and (min-width: $lg-width) {
+      flex-basis: calc(100% / 3);
+      padding: 0;
+    }
+
+    &::before {
+      content: none;
+    }
+
+    &:nth-child(2){
+      .price-card {
+        @media screen and (min-width: $lg-width) {
+          margin-top: -30px;
+          height: calc(100% + 60px);
+          box-shadow: 0px 19px 55px rgba(12, 70, 115, 0.4);
+        }
+      }
+    }
+  }
+
+  &__card {
+    background: #F0F6FF;
+    min-height: 100%;
+    padding: 25px 20px;
+    color: #6A7D99;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $lg-width) {
+      padding: 35px 40px;
+      box-shadow: 0px 33px 33px rgba(29, 48, 79, 0.04);
+    }
+
+
+    &.annual {
+      background: linear-gradient(180deg, #2096F3 0%, #0952C0 100%);
+      color: #B3CCF0;
+
+      .price-card {
+        &__title {
+          color: white;
+          border-bottom-color: #299BF8;
+        }
+
+        &__price, &__videos, &__length {
+          b {
+            color: white;
+          }
+        }
+        &__price{
+          background-image: url('../img/pricing/coin_annual.svg');
+        }
+        &__videos{
+          background-image: url('../img/pricing/play_annual.svg');
+        }
+        &__length{
+          background-image: url('../img/pricing/movie_annual.svg');
+        }
+        &__button{
+          button, a{
+            color: #B3CBF0;
+            border-color: white;
+
+          }
+
+          b{
+            color: white;
+          }
+        }
+      }
+    }
+
+    &.enterprise {
+      background: linear-gradient(180deg, #004E80 0%, #11274B 100%);
+      color: #B3CCF0;
+      .price-card {
+        &__title {
+          color: #71B2DD;
+          border-bottom-color: #1C5A87;
+        }
+        &__price, &__videos, &__length {
+          b {
+            color: white;
+          }
+        }
+        &__button{
+          button, a{
+            color: #B3CBF0;
+            border-color: white;
+          }
+          b{
+            color: white;
+          }
+        }
+      }
+    }
+
+    .price-card {
+      &__title {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 160%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #B7C6DC;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E4EBF5;
+        margin-bottom: 25px;
+        word-break: break-word;
+        @media screen and (min-width: $lg-width) {
+          font-size: 38px;
+          padding-bottom: 20px;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__price, &__videos, &__length {
+        padding-top: 32px;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 160%;
+        margin-bottom: 25px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        @media screen and (min-width: $lg-width) {
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+
+        b {
+          color: $main-color;
+          display: block;
+          font-size: 14px;
+          line-height: 140%;
+          @media screen and (min-width: $lg-width) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__videos {
+        background-image: url('../img/pricing/play_month.svg');
+
+      }
+
+      &__price {
+        background-image: url('../img/pricing/coin_month.svg');
+
+        b {
+          font-size: 16px;
+          line-height: 160%;
+          @media screen and (min-width: $lg-width) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      &__length {
+        background-image: url('../img/pricing/movie_month.svg');
+        @media screen and (min-width: $lg-width) {
+          margin-bottom: 35px;
+        }
+      }
+
+      &__button{
+        font-size: 13px;
+        line-height: 12px;
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+
+
+        &.single{
+          b{
+            margin-bottom: 0;
+            @media screen and (min-width: $lg-width){
+              font-size: 16px;
+              line-height: 15px;
+            }
+          }
+        }
+        b{
+          font-size: 14px;
+          line-height: 13px;
+          display: block;
+          color: $main-color;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+
+        button, a{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          vertical-align: middle;
+          height: 70px;
+          width: 100%;
+          text-align: center;
+          border: 2px solid #2096F3;
+          border-radius: 35px;
+          background: transparent;
+          color: #6A7D99;
+          padding: 0 35px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

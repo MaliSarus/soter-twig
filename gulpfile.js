@@ -25,14 +25,14 @@ var paths = {
   css: './src/assets/css',
   js: './src/assets/js',
   images: './src/assets/images',
-  img: './src/assets/images',
+  img: './src/assets/img',
 };
 
 function express(cb) {
   let start = false
   return nodemon({
     script: 'server.js',
-    ext: 'js twig',
+    ext: 'twig',
     env: {'NODE_ENV': 'development'},
   })
     .on('start', function () {
@@ -64,73 +64,38 @@ function browsersync(cb) {
 }
 
 function twigBuild(fileName, twigData) {
-return src([paths.src + '/templates/*.twig'])
-  .pipe(flatmap(function (stream, file) {
-    const fileName = file.stem
-    const twigData = {
-      ...dataForTwig[fileName],
-      url: fileName === 'index' ? '/' : `/${fileName}`
-    }
-    return stream
-      .pipe(plumber({
-        handleError: function (err) {
-          console.log(err);
+  return src([paths.src + '/templates/*.twig'])
+    .pipe(flatmap(function (stream, file) {
+      const fileName = file.stem
+      const twigData = {
+        ...dataForTwig[fileName],
+        url: fileName === 'index' ? '/' : `/${fileName}`
+      }
+      return stream
+        .pipe(plumber({
+          handleError: function (err) {
+            console.log(err);
+            this.emit('end');
+          }
+        }))
+        .pipe(twig({
+          extname: '.php',
+          data: twigData,
+        }))
+        .on('error', function (err) {
+          process.stderr.write(err.message + '\n');
           this.emit('end');
-        }
-      }))
-      .pipe(twig({
-        extname: '.php',
-        data: twigData,
-      }))
-      .on('error', function (err) {
-        process.stderr.write(err.message + '\n');
-        this.emit('end');
-      });
-  }))
-  .pipe(dest(paths.build));
+        });
+    }))
+    .pipe(dest(paths.build));
 };
+
 
 function scripts() {
   return src(paths.js + '/app.js', {allowEmpty: true})
-    .pipe(webpack({
-      mode: 'production',
-      performance: {
-        hints: false,
-        maxEntrypointSize: 512000,
-        maxAssetSize: 512000
-      },
-      module: {
-        rules: [
-          {
-            test: /\.(js)$/,
-            exclude: /(node_modules)/,
-            loader: 'babel-loader',
-            query: {
-              presets: ['@babel/env']
-            }
-          },
-          {
-            test: /\.css$/,
-            loaders: [
-              {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: './src/assets/css',
-                },
-              },
-              "css-loader"]
-          },
-        ]
-      },
-      plugins: [
-        new MiniCssExtractPlugin({
-          chunkFilename: 'plugins.css'
-        })
-      ]
-    })).on('error', function handleError() {
+    .pipe(webpack(require('./webpack.config'))).on('error', function handleError() {
       this.emit('end')
     })
-    .pipe(rename('script.js'))
     .pipe(dest(paths.js))
     .pipe(browserSync.stream())
 }
@@ -148,6 +113,17 @@ function styles() {
     }))
     .pipe(gcmq())
     // .pipe(rename('app.min.css'))
+    .pipe(dest(paths.css))
+    .pipe(browserSync.stream())
+}
+
+function cleanChunks() {
+  return del(paths.css + '/chunks.css')
+}
+
+function cssInJs() {
+  return src(paths.js + '/main.css', {allowEmpty: true})
+    .pipe(rename('chunks.css'))
     .pipe(dest(paths.css))
     .pipe(browserSync.stream())
 }
@@ -174,8 +150,9 @@ function createBuild() {
 function startwatch() {
   // watch(paths.src + '/**/*.twig', {usePolling: true}).on('change', browserSync.reload);
   watch(paths.sass + '/**/*', {usePolling: true}, styles);
-  watch(paths.js + '/**/*.js', {usePolling: true}, scripts)
+  watch([paths.js + '/**/*.js', '!' + paths.js + '**/app.min.js'], {usePolling: true}, series(cleanChunks,scripts))
   watch(paths.images + '/**/*.{jpg,jpeg,png,webp,svg,gif}', {usePolling: true}, images)
+  watch(paths.js + '/main.css', {usePolling: true}, cssInJs)
   // watch(`${paths.src}/**/*.{${fileswatch}}`, {usePolling: true}).on('change', browserSync.reload)
 }
 
@@ -185,4 +162,4 @@ exports.styles = styles
 exports.images = images
 exports.cleanimg = cleanimg
 exports.build = series(clearDist, styles, images, twigBuild, createBuild)
-exports.default = series(scripts, images, styles, parallel(browsersync, express, startwatch))
+exports.default = series(scripts, cssInJs, images, styles, parallel(browsersync, express, startwatch))

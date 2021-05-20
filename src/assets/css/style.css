@@ -9453,6 +9453,238 @@ img.align-center {
   object-position: center top;
 }
 
+.pricing {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background-image: url("../img/pricing/bg.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 400px;
+}
+
+.pricing__head {
+  max-width: 728px;
+  text-align: center;
+  margin: 0 auto 40px;
+  color: #11274B;
+}
+
+.pricing__head h2 {
+  margin-bottom: 10px;
+}
+
+.pricing__content {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.pricing__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -5px 0;
+}
+
+.pricing__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.pricing__item::before {
+  content: none;
+}
+
+.pricing__card {
+  background: #F0F6FF;
+  min-height: 100%;
+  padding: 25px 20px;
+  color: #6A7D99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.pricing__card.annual {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2096F3), to(#0952C0));
+  background: -o-linear-gradient(top, #2096F3 0%, #0952C0 100%);
+  background: linear-gradient(180deg, #2096F3 0%, #0952C0 100%);
+  color: #B3CCF0;
+}
+
+.pricing__card.annual .price-card__title {
+  color: white;
+  border-bottom-color: #299BF8;
+}
+
+.pricing__card.annual .price-card__price b,
+.pricing__card.annual .price-card__videos b,
+.pricing__card.annual .price-card__length b {
+  color: white;
+}
+
+.pricing__card.annual .price-card__price {
+  background-image: url("../img/pricing/coin_annual.svg");
+}
+
+.pricing__card.annual .price-card__videos {
+  background-image: url("../img/pricing/play_annual.svg");
+}
+
+.pricing__card.annual .price-card__length {
+  background-image: url("../img/pricing/movie_annual.svg");
+}
+
+.pricing__card.annual .price-card__button button,
+.pricing__card.annual .price-card__button a {
+  color: #B3CBF0;
+  border-color: white;
+}
+
+.pricing__card.annual .price-card__button b {
+  color: white;
+}
+
+.pricing__card.enterprise {
+  background: -webkit-gradient(linear, left top, left bottom, from(#004E80), to(#11274B));
+  background: -o-linear-gradient(top, #004E80 0%, #11274B 100%);
+  background: linear-gradient(180deg, #004E80 0%, #11274B 100%);
+  color: #B3CCF0;
+}
+
+.pricing__card.enterprise .price-card__title {
+  color: #71B2DD;
+  border-bottom-color: #1C5A87;
+}
+
+.pricing__card.enterprise .price-card__price b,
+.pricing__card.enterprise .price-card__videos b,
+.pricing__card.enterprise .price-card__length b {
+  color: white;
+}
+
+.pricing__card.enterprise .price-card__button button,
+.pricing__card.enterprise .price-card__button a {
+  color: #B3CBF0;
+  border-color: white;
+}
+
+.pricing__card.enterprise .price-card__button b {
+  color: white;
+}
+
+.pricing__card .price-card__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 160%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #B7C6DC;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E4EBF5;
+  margin-bottom: 25px;
+  word-break: break-word;
+}
+
+.pricing__card .price-card__price,
+.pricing__card .price-card__videos,
+.pricing__card .price-card__length {
+  padding-top: 32px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 160%;
+  margin-bottom: 25px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.pricing__card .price-card__price b,
+.pricing__card .price-card__videos b,
+.pricing__card .price-card__length b {
+  color: #11274B;
+  display: block;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.pricing__card .price-card__videos {
+  background-image: url("../img/pricing/play_month.svg");
+}
+
+.pricing__card .price-card__price {
+  background-image: url("../img/pricing/coin_month.svg");
+}
+
+.pricing__card .price-card__price b {
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.pricing__card .price-card__length {
+  background-image: url("../img/pricing/movie_month.svg");
+}
+
+.pricing__card .price-card__button {
+  font-size: 13px;
+  line-height: 12px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.pricing__card .price-card__button.single b {
+  margin-bottom: 0;
+}
+
+.pricing__card .price-card__button b {
+  font-size: 14px;
+  line-height: 13px;
+  display: block;
+  color: #11274B;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.pricing__card .price-card__button button,
+.pricing__card .price-card__button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  vertical-align: middle;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #2096F3;
+  border-radius: 35px;
+  background: transparent;
+  color: #6A7D99;
+  padding: 0 35px;
+  text-decoration: none;
+}
+
 .footer {
   padding-top: 36px;
   padding-bottom: 27px;
@@ -13010,6 +13242,75 @@ img.align-center {
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);
+  }
+
+  .pricing {
+    padding-top: 0;
+    padding-bottom: 175px;
+    background-size: 100% auto;
+  }
+
+  .pricing__head {
+    margin-bottom: 85px;
+  }
+
+  .pricing__head h2 {
+    margin-bottom: 20px;
+  }
+
+  .pricing__list {
+    margin: 0;
+  }
+
+  .pricing__item {
+    -ms-flex-preferred-size: calc(100% / 3);
+    flex-basis: calc(100% / 3);
+    padding: 0;
+  }
+
+  .pricing__item:nth-child(2) .price-card {
+    margin-top: -30px;
+    height: calc(100% + 60px);
+    -webkit-box-shadow: 0px 19px 55px rgba(12, 70, 115, 0.4);
+    box-shadow: 0px 19px 55px rgba(12, 70, 115, 0.4);
+  }
+
+  .pricing__card {
+    padding: 35px 40px;
+    -webkit-box-shadow: 0px 33px 33px rgba(29, 48, 79, 0.04);
+    box-shadow: 0px 33px 33px rgba(29, 48, 79, 0.04);
+  }
+
+  .pricing__card .price-card__title {
+    font-size: 38px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .pricing__card .price-card__price,
+  .pricing__card .price-card__videos,
+  .pricing__card .price-card__length {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .pricing__card .price-card__price b,
+  .pricing__card .price-card__videos b,
+  .pricing__card .price-card__length b {
+    font-size: 16px;
+  }
+
+  .pricing__card .price-card__price b {
+    font-size: 18px;
+  }
+
+  .pricing__card .price-card__length {
+    margin-bottom: 35px;
+  }
+
+  .pricing__card .price-card__button.single b {
+    font-size: 16px;
+    line-height: 15px;
   }
 
   .footer {

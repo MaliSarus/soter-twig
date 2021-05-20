@@ -1,0 +1,48 @@
+<div class="pricing">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="pricing__head">
+          <h2>SoterTask Pricing</h2>
+          <p>A subscription includes access to the SoterTask web dashboard, IOS app, and Android app. No number of users
+            limitation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="pricing__content">
+          <ul class="pricing__list">
+            {% for pricingCard in cards %}
+              <li class="pricing__item">
+                <div class="pricing__card price-card {{ pricingCard.type }}">
+                  <div class="price-card__title">
+                    {{ pricingCard.title }}
+                  </div>
+                  <div class="price-card__price">
+                    <b>{{ pricingCard.price.title }}</b>
+                    {{ pricingCard.price.subtitle }}
+                  </div>
+                  <div class="price-card__videos">
+                    <b>{{ pricingCard.videos.title }}</b>
+                    {{ pricingCard.videos.subtitle }}
+                  </div>
+                  <div class="price-card__length">
+                    <b>{{ pricingCard.length.title }}</b>
+                    {{ pricingCard.length.subtitle }}
+                  </div>
+                  <div class="price-card__button {{ not pricingCard.button.subtitle ? 'single' }}">
+                    <a href="#">
+                      <b>{{ pricingCard.button.title }}</b>
+                      {{ pricingCard.button.subtitle }}
+                    </a>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
