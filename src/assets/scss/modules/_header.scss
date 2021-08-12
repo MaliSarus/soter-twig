@@ -413,6 +413,9 @@
     &.aust{
       background-image: url("../img/interface/country-aust.svg");
     }
+    &.france{
+      background-image: url("../img/interface/country-france.svg");
+    }
 
   }
   &__list{
@@ -459,6 +462,11 @@
         &.aust{
           &::before{
             background-image: url("../img/interface/country-aust.svg");
+          }
+        }
+        &.france{
+          &::before {
+            background-image: url("../img/interface/country-france.svg");
           }
         }
         &::before{

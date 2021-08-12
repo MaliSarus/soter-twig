@@ -2923,6 +2923,10 @@ img.align-center {
   background-image: url("../img/interface/country-aust.svg");
 }
 
+.country__button.france {
+  background-image: url("../img/interface/country-france.svg");
+}
+
 .country__list {
   position: absolute;
   left: 0;
@@ -2966,6 +2970,10 @@ img.align-center {
 
 .country__list li a.aust::before {
   background-image: url("../img/interface/country-aust.svg");
+}
+
+.country__list li a.france::before {
+  background-image: url("../img/interface/country-france.svg");
 }
 
 .country__list li a::before {
@@ -5163,6 +5171,13 @@ img.align-center {
 
 .try-soter__right .request__input-wrapper::before {
   right: 18px;
+  width: 100%;
+  height: 100%;
+  max-width: 15px;
+  max-height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .try-soter__right .request__input-wrapper::after {
@@ -5190,19 +5205,28 @@ img.align-center {
 }
 
 .try-soter__right .request__input-wrapper.request__user::before {
-  content: url("../img/try-soter/user-icon.svg");
+  content: '';
+  background-image: url("../img/try-soter/user-icon.svg");
 }
 
 .try-soter__right .request__input-wrapper.request__company::before {
-  content: url("../img/try-soter/company-icon.svg");
+  content: '';
+  background-image: url("../img/try-soter/company-icon.svg");
+}
+
+.try-soter__right .request__input-wrapper.request__job::before {
+  content: '';
+  background-image: url("../img/try-soter/job.svg");
 }
 
 .try-soter__right .request__input-wrapper.request__phone::before {
-  content: url("../img/try-soter/phone-icon.svg");
+  content: '';
+  background-image: url("../img/try-soter/phone-icon.svg");
 }
 
 .try-soter__right .request__input-wrapper.request__mail::before {
-  content: url("../img/try-soter/mail-icon.svg");
+  content: '';
+  background-image: url("../img/try-soter/mail-icon.svg");
 }
 
 .try-soter__right .request__input-wrapper label {

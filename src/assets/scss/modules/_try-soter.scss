@@ -65,6 +65,13 @@
         }
         &::before{
           right: 18px;
+          width: 100%;
+          height: 100%;
+          max-width: 15px;
+          max-height: 15px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
           @media screen and (min-width: $md-width){
             right: 20px;
           }
@@ -92,22 +99,32 @@
         }
         &.request__user{
           &::before{
-            content: url("../img/try-soter/user-icon.svg");
+            content: '';
+            background-image: url("../img/try-soter/user-icon.svg");
           }
         }
         &.request__company{
           &::before{
-            content: url("../img/try-soter/company-icon.svg");
+            content: '';
+            background-image: url("../img/try-soter/company-icon.svg");
+          }
+        }
+        &.request__job{
+          &::before{
+            content: '';
+            background-image: url("../img/try-soter/job.svg");
           }
         }
         &.request__phone{
           &::before{
-            content: url("../img/try-soter/phone-icon.svg");
+            content: '';
+            background-image: url("../img/try-soter/phone-icon.svg");
           }
         }
         &.request__mail{
           &::before{
-            content: url("../img/try-soter/mail-icon.svg");
+            content: '';
+            background-image: url("../img/try-soter/mail-icon.svg");
           }
         }
         label{
