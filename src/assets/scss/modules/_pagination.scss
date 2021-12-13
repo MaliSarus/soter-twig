@@ -25,6 +25,9 @@
   &:hover {
     background: #2096F3;
   }
+  &:not(.nav-dot){
+    background: transparent;
+  }
 }
 
 .little-dot--first,

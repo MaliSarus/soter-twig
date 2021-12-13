@@ -1,0 +1,50 @@
+.playbook-section {
+  background-image: url(../img/playbook/image.png),url(../img/playbook/bg-bottom.svg), url(../img/playbook/bg-top.svg), linear-gradient(90deg, #2096F3 -21.46%, #2855C5 73.8%, #0851BF 175.7%);
+  background-position: center bottom, left bottom ,right 30px , center;
+  background-size: auto 80.375vw,auto, auto 100%, auto;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  padding-bottom: 84.375vw;
+  color: white;
+  text-align: center;
+
+  @include forLg {
+    text-align: left;
+    padding: 150px 0;
+    background-size: auto,auto, auto 100%, auto;
+    background-position: 75% bottom, left bottom ,right 30px , center;
+  }
+
+
+  &__content {
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 120%;
+    margin-bottom: 20px;
+    @include forMd {
+      font-size: 55px;
+      margin-bottom: 35px;
+
+    }
+  }
+  &__text{
+    margin: 20px 0;
+    @include forMd {
+      margin: 35px 0;
+    }
+  }
+  &__controls{
+    margin: 40px 0;
+    @include forMd {
+      margin: 60px 0;
+    }
+  }
+}

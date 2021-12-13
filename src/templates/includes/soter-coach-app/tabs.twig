@@ -1,0 +1,60 @@
+{% with {sectionClass: 'tabs-section'} %}
+  <section class="{{ sectionClass }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="{{ sectionClass }}__block">
+            <h2 class="{{ sectionClass }}__title">
+              Available Training Programs
+            </h2>
+            <div class="{{ sectionClass }}__tabs tabs">
+              <div class="{{ sectionClass }}__tabs-controls" data-simplebar>
+                <ul class="{{ sectionClass }}__tabs-list tabs__list">
+                  <li class="tabs__item active" data-tab="1">Manual Handling Training</li>
+                  <li class="tabs__item" data-tab="2">Early Intervention Training</li>
+                  <li class="tabs__item" data-tab="3">Early Intervention Training</li>
+                </ul>
+                <div class="{{ sectionClass }}__tabs-indicator">
+                  <div class="{{ sectionClass }}__tabs-thumb"></div>
+                </div>
+              </div>
+              <div class="{{ sectionClass }}__tabs-content tabs__content">
+                <div class="{{ sectionClass }}__tabs-tab tabs__tab active" data-tab="1">
+                  <div class="{{ sectionClass }}__content">
+                    <div class="{{ sectionClass }}__text">
+                      <h3>Manual Handling Training</h3>
+                      <p>Manual Handling Training would help to increase awareness of posture and body mechanics through
+                        the biofeedback from the device, together with the Manual Handling Coaching program, delivered
+                        through the mobile app.
+                        Manual Handling Training would help to increase awareness of posture and body mechanics through
+                        the biofeedback from the device, together with the Manual Handling Coaching program, delivered
+                        through the mobile app.</p>
+                    </div>
+                    <div class="image">
+                      <img src="./assets/img/tabs/1.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="{{ sectionClass }}__tabs-tab tabs__tab" data-tab="2">
+                  <div class="{{ sectionClass }}__content">
+                    <div class="{{ sectionClass }}__text">
+                      <h3>Manual Handling Training</h3>
+                      <p>
+                        Manual Handling Training would help to increase awareness of posture and body mechanics through
+                        the biofeedback from the device, together with the Manual Handling Coaching program, delivered
+                        through the mobile app.</p>
+                    </div>
+                    <div class="image">
+                      <img src="./assets/img/tabs/1.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="{{ sectionClass }}__tabs-tab tabs__tab" data-tab="3">3 таб</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endwith %}

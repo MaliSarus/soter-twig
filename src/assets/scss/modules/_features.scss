@@ -1,3 +1,4 @@
+@use "sass:math";
 .features{
   background: linear-gradient(90deg, #2096F3 0%, #2855C5 49.48%, #0851BF 100%);
   padding-top: 51px;
@@ -54,7 +55,7 @@
     @media screen and (min-width: $md-width){
       padding: 0 30px;
       margin-bottom: 0;
-      flex-basis: (100% / 3);
+      flex-basis: math.div(100% , 3);
     }
     &:last-child{
       margin-bottom: 0;

@@ -1,0 +1,189 @@
+.technology-section {
+  overflow: hidden;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
+  @include forMd {
+    padding: 140px 0;
+  }
+
+  &__block {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+    @include forMd {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    color: $main-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7px 0;
+    padding: 0;
+    @include forSm {
+      margin: -10px;
+    }
+  }
+
+  &__item {
+    isolation: isolate;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 7px 0;
+    @include forSm {
+      flex-basis: 50%;
+      padding: 10px;
+    }
+
+    &::before {
+      content: none;
+    }
+
+    &:nth-child(odd) {
+      .technology-section {
+        &__card {
+          &::before {
+            width: 164px;
+            height: 130px;
+            position: absolute;
+            bottom: -35px;
+            left: -15px;
+            content: '';
+            background-size: contain;
+            background-image: url(../img/technology/balls.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            @include forMd {
+              width: 350px;
+              height: 270px;
+              bottom: -80px;
+              left: -80px;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .technology-section {
+        &__card {
+          &::before {
+            width: 164px;
+            height: 130px;
+            position: absolute;
+            bottom: -35px;
+            right: -15px;
+            content: '';
+            background-size: contain;
+            background-image: url(../img/technology/balls.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            @include forMd {
+              width: 350px;
+              height: 270px;
+              bottom: unset;
+              right: -100px;
+              top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    background-color: white;
+    padding: 30px 25px 20px;
+    @include forSm {
+      padding: 40px 30px 30px 35px;
+    }
+
+    .technology-card {
+      &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        @include forMd {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__image {
+        margin-bottom: 30px;
+        @include forSm {
+          margin-bottom: 40px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-height: 230px;
+          object-fit: scale-down;
+          object-position: center;
+        }
+      }
+
+      &__content {
+        font-size: 14px;
+        line-height: 160%;
+        margin-top: auto;
+        p {
+          font-size: inherit;
+          line-height: inherit;
+        }
+
+        > :first-child {
+          margin-top: 0;
+        }
+
+        > :last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__controls {
+        margin-top: 25px;
+
+        .button {
+          padding: 0;
+          text-transform: none;
+          transition: padding-left .4s ease-out;
+          @include mqMax($sm-width - 1px) {
+            display: inline-flex;
+            width: 100%;
+            text-align: left;
+            &::after {
+              margin-left: auto;
+            }
+          }
+
+          &:hover {
+            padding-left: 25px;
+            color: $accent-color;
+
+            &::after {
+              filter: none
+            }
+          }
+        }
+      }
+    }
+  }
+}

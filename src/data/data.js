@@ -794,6 +794,76 @@ const data = {
         }
       }
     ]
+  },
+  device:{
+    title: 'Device',
+    measures: [
+      'Lifting movements with poor technique (primarily sagittal flexion)',
+      'Overreaching (sagittal flexion)',
+      'Twisting (rotation of the trunk)',
+      'Repetitive movements & forces',
+      'Sustained awkward static postures (including sagittal flexion, sagittal extension, rotation of the trunk & lateral flexion)',
+      'Sustained & high forces',
+      'Sudden impact forces',
+      'Full-body vibrations',
+    ],
+    reasons: [
+      {
+        icon: 'time-icon.svg',
+        title: 'Fast',
+        text: 'Implement the trial in less than one hour for dozens of workers.',
+      },
+      {
+        icon: 'arrow-icon.svg',
+        title: 'Change management',
+        text: 'A limited trial will help with change management and product acceptance.',
+      },
+      {
+        icon: 'worker-icon.svg',
+        title: 'Self-managed',
+        text: 'Worker drives the improvement process, manager intervention is required only by exception.',
+      },
+      {
+        icon: 'risk-icon.svg',
+        title: 'Reduce risk',
+        text: 'Minimize cost exposure while the benefits are demonstrated',
+      }
+    ],
+  },
+  'soter-coach-app':{
+    title: 'Soter-coach-app',
+    measures: [
+      'Lifting movements with poor technique (primarily sagittal flexion)',
+      'Overreaching (sagittal flexion)',
+      'Twisting (rotation of the trunk)',
+      'Repetitive movements & forces',
+      'Sustained awkward static postures (including sagittal flexion, sagittal extension, rotation of the trunk & lateral flexion)',
+      'Sustained & high forces',
+      'Sudden impact forces',
+      'Full-body vibrations',
+    ],
+    reasons: [
+      {
+        icon: 'time-icon.svg',
+        title: 'Fast',
+        text: 'Implement the trial in less than one hour for dozens of workers.',
+      },
+      {
+        icon: 'arrow-icon.svg',
+        title: 'Change management',
+        text: 'A limited trial will help with change management and product acceptance.',
+      },
+      {
+        icon: 'worker-icon.svg',
+        title: 'Self-managed',
+        text: 'Worker drives the improvement process, manager intervention is required only by exception.',
+      },
+      {
+        icon: 'risk-icon.svg',
+        title: 'Reduce risk',
+        text: 'Minimize cost exposure while the benefits are demonstrated',
+      }
+    ],
   }
 }
 

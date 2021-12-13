@@ -1,0 +1,28 @@
+<section class="measures">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="measures__head">
+          <h2>
+            SoterSpine Measures More Movements Than Any Other Product Developed
+          </h2>
+          <div class="measures__total">
+            <div class="measures__total-count"></div>
+            <span>In total</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="measures__list">
+          <ol>
+            {% for measure in measures %}
+              <li>{{ measure }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,7 +3,9 @@ let fileswatch = 'html,htm,txt,json,md,woff2,php,twig' // List of files extensio
 const {src, dest, parallel, series, watch} = require('gulp')
 const browserSync = require('browser-sync').create()
 const webpack = require('webpack-stream')
-const sass = require('gulp-sass')
+const sassLib = require('sass')
+const gulpSass = require('gulp-sass')
+const sass = gulpSass(sassLib)
 const autoprefixer = require('gulp-autoprefixer')
 const gcmq = require('gulp-group-css-media-queries')
 const rename = require('gulp-rename')
@@ -104,7 +106,7 @@ function styles() {
   return src(paths.sass + '/**/*.scss')
     .pipe(sassGlob())
     .pipe(sass({
-      outputStyle: 'compact'
+      outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions'],

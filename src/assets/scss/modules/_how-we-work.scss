@@ -1,3 +1,4 @@
+@use "sass:math";
 .how-we-work{
   padding-top: 45px;
   padding-bottom: 53px;
@@ -67,7 +68,7 @@
     }
     @media screen and (min-width: $md-width){
       max-width: none;
-      flex-basis: (100% / 3);
+      flex-basis: math.div(100% , 3);
 
     }
     &-top{

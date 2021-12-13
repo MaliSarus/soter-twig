@@ -1,0 +1,141 @@
+.big-accent-info-section {
+  @include forMd {
+    padding: 0 50px;
+  }
+  &__block {
+    max-width: 1550px;
+    background-image: url(../img/big-accent-info/lines-top.svg), url(../img/big-accent-info/lines-bottom.svg), linear-gradient(246.38deg, #442B84 0%, #261550 100%);
+    background-position: right top, left bottom, left top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0 auto 50px;
+    box-shadow: 0 30px 0 0 #F5F3FA,
+    -30px 30px 0 0 #F5F3FA,
+    30px 30px 0 0 #F5F3FA;
+  }
+
+  &__content {
+    color: white;
+    padding: 70px 0;
+    @include forMd {
+      padding: 140px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    max-width: 700px;
+    @include forMd {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__desc {
+    @include forMd {
+      columns: 2;
+      column-gap: 70px;
+    }
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 1rem 0;
+
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    @include forMd {
+      margin: 40px -30px -140px;
+      justify-content: space-between;
+    }
+
+
+  }
+
+  &__item {
+    flex-basis: 100%;
+    max-width: 400px;
+    @include forMd {
+      max-width: none;
+      padding: 0 30px;
+      flex-basis: calc(100% / 3);
+
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @include forMd {
+        margin-bottom: 0;
+      }
+    }
+
+    &-block {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+      font-size: 17px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      @include forMd {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-image {
+      margin-top: auto;
+      position: relative;
+      background: #6B5A97;
+      border: 10px solid #1D103E;
+      border-radius: 25px;
+      overflow: hidden;
+      @include forMd {
+        border-bottom: none;
+        border-radius: 25px 25px 0 0;
+
+      }
+
+      &::before {
+        display: block;
+        padding-top: 131.2%;
+        @include forMd {
+          content: '';
+
+        }
+      }
+
+      img {
+
+        display: block;
+        width: 100%;
+        object-position: top center;
+        object-fit: cover;
+        @include forMd {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+
+        }
+      }
+    }
+  }
+}

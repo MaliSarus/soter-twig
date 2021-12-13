@@ -6,6 +6,41 @@ $xl-width: 1200px;
 $main-color: #11274B;
 $accent-color: #2096F3;
 
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin mqMax($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin forSm {
+  @media screen and (min-width: $sm-width) {
+    @content;
+  }
+}
+
+@mixin forMd {
+  @media screen and (min-width: $md-width) {
+    @content;
+  }
+}
+
+@mixin forLg {
+  @media screen and (min-width: $lg-width) {
+    @content;
+  }
+}
+
+@mixin forXl {
+  @media screen and (min-width: $xl-width) {
+    @content;
+  }
+}
 
 body, html {
   margin: 0;
